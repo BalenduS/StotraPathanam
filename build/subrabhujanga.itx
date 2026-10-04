@@ -1,0 +1,522 @@
+% Text title            : subrahmaNya bhujaNgam
+% File name             : subrabhujanga.itx
+% Category              : subrahmanya, bhujanga, shankarAchArya
+% Location              : doc\_subrahmanya
+% Author                : Shankaracharya
+% Transliterated by     : Ravishankar Mayavaram msr at comco.com
+% Proofread by          : Ravishankar Mayavaram, P. P. Narayanaswami swami at math.mun.ca, Karthik Raman
+% Description-comments  : https://archive.org/details/CompleteWorksOfSriSankaracharyaIn20Volumes1910Edition/
+% Latest update         : March 15, 2001, October 27, 2025
+% Send corrections to   : sanskrit at cheerful dot c om
+%
+% This text is prepared by volunteers and is to be used for personal study 
+% and research. The file is not to be copied or reposted for promotion of 
+% any website or individuals or for commercial purpose without permission. 
+% Please help to maintain respect for volunteer spirit.
+%
+\documentstyle[11pt,multicol,itrans]{article}
+#include=ijag.inc
+#endwordvowel=.h
+\portraitwide
+\parindent=100pt                
+\let\usedvng=\Largedvng      % for 1 column     
+\pagenumbering{itrans} 
+\def\engtitle#1{\hrule\medskip\centerline{\LARGE #1}}
+\def\itxtitle#1{\medskip\centerline{\LARGEdvng #1}\medskip\hrule}
+\def\endtitles{\medskip\obeyspaceslines}
+%%
+\begin{document}
+\engtitle{..  Shri Subrahmanya Bhujangam 1 ..}##
+\itxtitle{.. shrIsubrahmaNyabhuja~Ngam 1 ..}##\endtitles ##
+## Comments by Ravishankar Mayavaram
+
+shrI subrahmaNya bhujangam is a stotra sung under inspiration by shrI Adi shankarAchArya at Thiruchendur (presently located in Tamil Nadu, India). When he meditated upon shrI subrahmaNya, he became aware of the self luminous light shining in his heart and words came out his mouth in extempore in bhujanga metre. It is also said that AchArya then actually saw the AdisheSha worshipping the Lord and adopted the bhujanga metre.
+
+Major portion of the translation provided here is adopted from, Iyer, Ganesa M., Srimat Sankara Bhagavat Padal's Sri Subrahmanya Bhujangam, The Little flower Company, Madras, 1992.
+
+Invocation of shrI vighneshvara
+##
+
+sadA bAlarUpA.api vighnAdrihantrI
+   mahAdantivaktrA.api pa~nchAsyamAnyA |
+vidhIndrAdimR^igyA gaNeshAbhidhA me
+   vidhattAM shriyaM kA.api kalyANamUrtiH || 1|| ##
+Though he always sports the appearance of a child, he can crumble the the mountains of obstacles. Though he is elephant--faced, he is honored even by his five--faced father Shiva (sadyaojAtam, vAmadevam, aghoram, tatpuruSham and IshAnam). Lord Brahma, Indra and the other Devas seek him to fulfil their aspirations. He is known as Ganesha and he is endowed with boundless glory. May he bless me with wealth!
+
+AchAryA's humility
+##
+
+na jAnAmi shabdaM na jAnAmi chArthaM
+   na jAnAmi padyaM na jAnAmi gadyam |
+chidekA ShaDAsyA hR^idi dyotate me
+   mukhAnniHsarante girashchApi chitram || 2|| ##
+I know not the science of musical sounds, I know not the meanings of complex texts either, I know not the nature of shlokas made of four types of padAs, and nor do I know the intricacies of the Gadyam style!  But in my heart, shines a effulgent light with luminous six faces, and because of that from my mouth, amazing phrases with musical tone and meanings pour out in extempore.
+
+This shloka brings out the humility of the AchArya, who is considered as the greatest jnani, poet, and yogi who walked on the face of this earth. Meditating on the verse will bring wisdom to the aspirant.  
+
+   Lord as the Goal of VedAs
+
+##
+mayUrAdhirUDhaM mahAvAkyagUDhaM
+   manohAridehaM mahachchittageham |
+mahIdevadevaM mahAvedabhAvaM
+   mahAdevabAlaM bhaje lokapAlam || 3|| ##
+When shrI shankara sang this verse, it is said that Lord Subrahmanya gave him darshan.
+
+O Son of Mahadeva! Seated on the peacock chariot, being the essence of the great mahA vAkyAs, having wonderfully attractive body, dwelling in the heart of great sages, O the quintessence of four vedas!  Thou are indeed the Lord of the Universe.
+
+   Reason for residing on the sea shore
+##
+
+yadA sannidhAnaM gatA mAnavA me
+   bhavAmbhodhipAraM gatAste tadaiva |
+iti vya~njayansindhutIre ya Aste
+   tamIDe pavitraM parAshaktiputram || 4|| ##
+O Lord Subrahmanya! son of spotless parAshakti [the Mother of the Cosmos], Thou have taken the your abode near the sea shore (Thiruchendur is a coastal town) as if it is indication that whenever the devotees take refuge in Thee, they can easily cross the ocean of Samsara (the eternal cycle of life and death) and reach the other side of the shore safely!
+
+Destroyer of devotee's difficulties
+##
+
+yathAbdhestara~NgA layaM yAnti tu~NgA\-
+   stathaivApadaH sannidhau sevatAM me |
+itIvormipa~NktIrnR^iNAM darshayantaM
+   sadA bhAvaye hR^itsaroje guhaM tam || 5|| ##
+The waves of worries that haunt the minds of the devotees get destroyed like the waves of the ocean when they hit the shore, Thou stands on the sea-side town of Thiruchendur exemplifying this truth that the mental worry-waves get destroyed when the devotees surrender themselves at Thy feet. O Lord Guha (one who resides in the cave of the heart)! I meditate on you always!
+
+Glory of Sugandha Hill
+##
+
+girau mannivAse narA ye.adhirUDhA\-
+   stadA parvate rAjate te.adhirUDhAH |
+itIva bruvangandhashailAdhirUDhaH
+   sa devo mude me sadA ShaNmukho.astu || 6|| ##
+O Lord ShanmukhA! Thou stands on the top of the Sugandha hill, proclaiming that whenever the devotees climb this hill it will give the same benefit as climbing the king of mountains (Kailas)! May the six-faced lord on the Sugandha hills remain there to bless me!
+
+   Glory of Lord Guha
+##
+
+mahAmbhodhitIre mahApApachore
+   munIndrAnukUle sugandhAkhyashaile |
+guhAyAM vasantaM svabhAsA lasantaM
+   janArtiM harantaM shrayAmo guhaM tam || 7|| ##
+On the shores of the great ocean which steals away the sins of the devotees, stands the Sugandha hills, the most favourable site for the sages to perform their penance! Thou resides there to destroy the worries of the devotees! O self-luminous Lord who is present in the cave of the heart! I adore Thee!  
+
+   Description of Lord's bed room
+##
+
+lasatsvarNagehe nR^iNAM kAmadohe
+   sumastomasa~nChannamANikyama~nche |
+samudyatsahasrArkatulyaprakAshaM
+   sadA bhAvaye kArtikeyaM suresham || 8|| ##
+In a radiant golden bed room, on a cot set with rubies and covered on all sides with sweet smelling flowers, Thou art seated with the effulgence of thousand suns! Thou art the answer to every desire of the heart and Thou fulfils the righteous desires of Thy devotees! Thou art the lord of devas and son of the lord of the universe! O KartikeyA I meditate on Thee!
+
+   Meditation on Lord's feet
+##
+
+raNaddha.nsake ma~njule.atyantashoNe
+   manohArilAvaNyapIyUShapUrNe |
+manaHShaT.hpado me bhavakleshataptaH
+   sadA modatAM skanda te pAdapadme || 9|| ##
+Let the mind (like a bee) which is burdened with domestic troubles become happy by hovering around Thy lotus feet which is adorned with the jingling ringlets made of rings and beads, red in color indicating the grace, filled with the nectar of beauty and attracts the minds of the devotees.
+
+
+   Meditation on Lord's waist
+##
+
+suvarNAbhadivyAmbarairbhAsamAnAM
+   kvaNatki~NkiNImekhalAshobhamAnAm |
+lasaddhemapaTTena vidyotamAnAM
+   kaTiM bhAvaye skanda te dIpyamAnAm ||  10 || ##
+Oh! Skanda, I meditate on Thy waist which is covered by a gold colored cloth, shining with a string of ringing bells and beads, wearing a shining gold belt over the golden silk cloth, and which is by itself self-resplendent
+
+   Meditation on Lord's Chest
+##
+
+pulindeshakanyAghanAbhogatu~Nga\-
+   stanAli~NganAsaktakAshmIrarAgam |
+namasyAmyahaM tArakAre tavoraH
+   svabhaktAvane sarvadA sAnurAgam || 11|| ##
+Oh! conqueror of Tarakasura!  By embracing Valli's (Hunter's daughter) well--developed breast ornated with saffron, Thy chest became red colored, thereby manifesting your eternal grace towards devotees. And such a chest I adore.
+
+   Meditation on Twelve Arms
+##
+
+vidhau kL^iptadaNDAn svalIlAdhR^itANDA\-
+   nnirastebhashuNDAn dviShatkAladaNDAn |
+hatendrAriShaNDA~njagattrANashauNDAn
+   sadA te prachaNDAn shraye bAhudaNDAn || 12|| ##
+Oh! Shanmuga!  Thy arms punished Brahma, Thy arms governs the world as Thy play, Thy arms killed  Soorapadma and other demons who are enemies of Indra, Thy arms are matchless in protecting the Universe, and Thy arms are a terror to Thine enemies.  I worship Thy twelve arms which does all these things effortlessly.
+
+   Meditation on Lord's Six Faces
+##
+
+sadA shAradAH ShaNmR^igA~NkA yadi syuH
+   samudyanta eva sthitAshchetsamantAt |
+sadA pUrNabimbAH kala~Nkaishcha hInA\-
+   stadA tvanmukhAnAM bruve skanda sAmyam || 13|| ##
+What can I compare to Thy six faces!  If there be six full moons free from blemishes and if those moons be ever shining on all sides, even then they would be no match to your effulgent faces.
+
+   Meditation on Lord's Facial Features
+##
+
+sphuranmandahAsaiH saha.nsAni cha~ncha\-
+   tkaTAkShAvalIbhR^i~Ngasa~NghojjvalAni |
+sudhAsyandibimbAdharANIshasUno
+   tavAlokaye ShaNmukhAmbhoruhANi || 14|| ##
+Oh! Son of Parameshwara, I see Thy six lotus smiling faces shining like a group of swans, having gleaming side glance ever moving like a row of bees and with red lips overflowing with nectar.
+
+   Meditation on Lord's Twelve Eyes
+##
+
+vishAleShu karNAntadIrgheShvajasraM
+   dayAsyandiShu dvAdashasvIkShaNeShu |
+mayIShatkaTAkShaH sakR^itpAtitashche\-
+   dbhavette dayAshIla kA nAma hAniH || 15|| ##
+Oh! Son of Parameshwara! Oh! Merciful Lord!
+When Thou hast twelve broad long eyes extending upto ears, what will Thou loose by casting that side glance for a moment [on me]?
+
+   Meditation on Lord's Six Heads
+##
+
+sutA~Ngodbhavo me.asi jIveti ShaDdhA
+   japanmantramIsho mudA jighrate yAn |
+jagadbhArabhR^idbhyo jagannAtha tebhyaH
+   kirITojjvalebhyo namo mastakebhyaH || 16|| ##
+Oh! Lord of the Universe!  I offer my prostration to Thy six heads wearing crowns with brilliant rubies which protect the welfare of creatures, which were smelt by Parameshwara with joy uttering six times the mantra ``Child Thou were born of me, May Thou live long.''
+
+   Meditation on Lord Balasubrahmanya
+##
+
+sphuradratnakeyUrahArAbhirAma\-
+   shchalatkuNDalashrIlasadgaNDabhAgaH |
+kaTau pItavAsAH kare chArushaktiH
+   purastAnmamAstAM purArestanUjaH || 17|| ##
+    Oh Kumara! Son of Lord Parameshwara (who destroyed Tripura)!
+With garlands of brilliant rubies on Thy shoulders and chest, with bright cheeks shining when pendants dangling from Thy ears, wearing silk garment around Thy waist, and with vel in Thy hand, Oh! Lord appear before me (It is said that Lord appeared before AchArya when he sung this stotra)!
+
+   Meditation on Somaskandar
+##
+
+ihAyAhi vatseti hastAnprasAryA\-
+   hvayatyAdarAchCha~Nkare mAtura~NkAt |
+samutpatya tAtaM shrayantaM kumAraM
+   harAshliShTagAtraM bhaje  bAlamUrtim || 18|| ##
+When Lord Shankara called Thee affectionately with arms extended.
+Thou hurriedly rose from Mother's lap and rushed into Shankara's arms who embraced thee affectionately. I meditate on such a Lord Kumara.
+
+   Meditation on Lord's Eleven Names to Conquer Passions
+##
+
+kumAreshasUno guha skanda senA\-
+   pate shaktipANe mayUrAdhirUDha |
+pulindAtmajAkAnta bhaktArtihArin
+   prabho tArakAre sadA rakSha mAM tvam ||  19 || ##
+Oh kumara!  Oh Son of Lord of the Universe!  One shines in the cave of the heart as GuhA!  Oh skanda!  Oh Lord of the Devas Army!  Oh Wielder of the weapon Vel (spear) which is the svarUpa of Parashakti!
+One who rides on the peacock chariot!  Oh Beloved of the Hunter's daughter (Valli)!  Destroyer of the sins of your devotees!  Enemy of the TarAkasura!  Oh Lord protect me!
+
+It is said that one who recites these nine will over come the passions.
+
+   Prayer for Darshan During the Last Moments of Life
+##
+
+prashAntendriye naShTasa.nGYe vicheShTe
+   kaphodgArivaktre bhayotkampigAtre |
+prayANonmukhe mayyanAthe tadAnIM
+   drutaM me dayAlo bhavAgre guha tvam || 20|| ##
+    Hail Guha, Dayalo. During the last moments of my life, when
+I will have lost control of senses, when I will have lost consciousness, when I will be unable move my limbs, when I will be emitting foam of phlegm, when my body will be trembling with fear of death, when I will have none to protect me, Thou must hasten to give me Darshan then.
+
+   Prayer to Give Darshan During Death Pangs
+##
+
+kR^itAntasya dUteShu chaNDeShu kopA\-
+   ddaha chChinddhi bhinddhIti mAM tarjayatsu |
+mayUraM samAruhya mA bhairiti tvaM
+   puraH shaktipANirmamAyAhi shIghram || 21|| ##
+Oh! Lord, when ferocious messengers of Death-God come to torture me angrily shouting, ``Burn him, Kill him''
+Oh! Lord Thou must hasten to appear before me, riding on Peacock, carrying Shaktivel, to encourage me not to be afraid.
+
+   Prayer for Protection During Last Moments
+##
+
+praNamyAsakR^itpAdayoste patitvA
+   prasAdya prabho prArthaye.anekavAram |
+na vaktuM kShamo.ahaM tadAnIM kR^ipAbdhe
+   na kAryAntakAle manAgapyupekShA || 22|| ##
+Oh Merciful Lord!  I am prostating to Thy feet often to secure Thy blessings. Oh treasure house of mercy! I offer prayers to please Thee. Thou should not be indifferent towards me during my last moments.  At that time I may not have the control and energy to pray to Thee!
+
+   Prayer to Drive Away Mental Worries
+##
+
+sahasrANDabhoktA tvayA shUranAmA
+   hatastArakaH si.nhavaktrashcha daityaH |
+mamAntarhR^idisthaM manaHkleshamekaM
+   na ha.nsi prabho kiM karomi kva yAmi ||  23 || ##
+O Lord! Thous hast slain the demon Soora who ruled the thousand universes! So were the demons TArakasura and Simhavaktra. But Lord, why have you not killed the demon called mental worry which haunts my mind? When it is afflicting me, what will I do? and where will I go [other than you for help]?
+
+   Prayer to Destroy Mental Worries
+##
+
+ahaM sarvadA duHkhabhArAvasanno
+   bhavAndInabandhustvadanyaM na yAche |
+bhavadbhaktirodhaM sadA kL^iptabAdhaM
+   mamAdhiM drutaM nAshayomAsuta tvam ||  24 || ##
+Oh Son of Uma! I am always troubled by the mental worries. Thou art the friend of helpless! I approach none but you for saving me. Quickly destroy my mental worries as they interfere with my devotion towards Thee!
+
+   Glory of Lord's Holy Ash
+##
+
+apasmArakuShThakShayArshaH prameha\-
+   jvaronmAdagulmAdirogA mahAntaH |
+pishAchAshcha sarve bhavatpatrabhUtiM
+   vilokya kShaNAttArakAre dravante || 25|| ##
+Oh Conqueror of Taraka!  Severe epilepsy, leprosy, consumption, lung diseases, venreal diseases, fevers, mental diseases of all types, they run away the moment they Thy vibhuti.
+
+   Acts of the Indriyas
+##
+
+dR^ishi skandamUrtiH shrutau skandakIrti\-
+   rmukhe me pavitraM sadA tachcharitram |
+kare tasya kR^ityaM vapustasya bhR^ityaM
+   guhe santu lInA mamAsheShabhAvAH || 26|| ##
+Always may I have before my eyes the Murti of Lord Skanda!
+Always let my ears hear only the praises of Lord Skanda!  Always let my mouth sing the praise of Lord Skanda!  Always let my hands be of service to the Lord!  Always let my body be a servant to the Lord!
+Let my limbs, thoughts and actions be devoted to Skanda!
+
+   Lord Guha Alone is the Saviour of the Ordinary
+##
+
+munInAmutAho nR^iNAM bhaktibhAjA\-
+   mabhIShTapradAH santi sarvatra devAH |
+nR^iNAmantyajAnAmapi svArthadAne
+   guhAddevamanyaM na jAne na jAne || 27|| ##
+In all the worlds there are Devas to grant the boons of sages and great bhaktas. But for the lowly and ordinary devotees, I know not of any other Deity to protect them except Guha!
+
+   Six Faced Lord is Our Family Deity
+
+##
+
+kalatraM sutA bandhuvargaH pashurvA
+   naro vAtha nAri gR^ihe ye madIyAH |
+yajanto namantaH stuvanto bhavantaM
+   smarantashcha te santu sarve kumAra || 28|| ##
+Oh Lord KumAra!
+Let my wife, children, relatives, friends, other men and women in our household, venerate Thee! praise Thee! and always absorbed in Thy thoughts!
+
+   Prayer to Vel to Destroy Diseases
+##
+
+mR^igAH pakShiNo da.nshakA ye cha duShTA\-
+   stathA vyAdhayo bAdhakA ye mada~Nge |
+bhavachChaktitIkShNAgrabhinnAH sudUre
+   vinashyantu te chUrNitakrau~nchashaila || 29|| ##
+Oh! Destroyer of Krauncha Shaila!
+Let every thing that trouble my body, birds, beasts, insects, severe diseases, be pierced by Thy powerful weapon Vel and taken far away and destroyed.
+
+   Prayer to Father of the Universe
+##
+
+janitrI pitA cha svaputrAparAdhaM
+   sahete na kiM devasenAdhinAtha |
+ahaM chAtibAlo bhavAn lokatAtaH
+   kShamasvAparAdhaM samastaM mahesha || 30|| ##
+Do not the parents overlook the faults of their children?
+Oh! Chief of the army of Devas! I am a small child. Thou art the Father of the Universe. Oh MaheshA! Forgive all my faults.
+
+   Prayer to the Lord
+##
+
+namaH kekine shaktaye chApi tubhyaM
+   namashChAga tubhyaM namaH kukkuTAya |
+namaH sindhave sindhudeshAya tubhyaM
+   punaH skandamUrte namaste namo.astu || 31|| ##
+I bow to Thee, O Peacock (the symbol of vedas)!
+I bow to Thee, O Shakti Weapon (Vel is Parashakti herself),
+I bow to Thee, O Sheep (the symbol of MAya tattvam)
+I bow to Thee, O Cock (the symbol of Ego)
+I bow to Thee, O Ocean (the symbol of ananda)
+I bow to Thee, O Thiruchendur Shrine
+I bow to Thee, O Lord Skanda!
+I bow to Thee again and again!
+Let all my prostrations reach Thee!
+
+
+   Prayer to Lord to Reveal His Powers
+##
+
+jayAnandabhUma~njayApAradhAma\-
+   ~njayAmoghakIrte jayAnandamUrte |
+jayAnandasindho jayAsheShabandho
+   jaya tvaM sadA muktidAneshasUno || 32|| ##
+O Source of ananda, reveal Thyself!
+O Embodiment boundless effulgent light, reveal Thyself!
+O Lord! who has all pervading glory, reveal Thyself!
+O Embodiment of bliss, reveal Thyself!
+O Lord, Thou art the ocean of bliss, reveal Thyself!
+O Lord who is the friend of all creatures, reveal Thyself!
+O Lord, Son of Parameshwara, Bestower of liberation, reveal Thy Glory
+to me and protect me!
+
+   Effect of Reciting These Shlokas
+##
+
+bhuja~NgAkhyavR^ittena kL^iptaM stavaM yaH
+   paThedbhaktiyukto guhaM sampraNamya |
+suputrAnkalatraM dhanaM dIrghamAyu\-
+   rlabhetskandasAyujyamante naraH saH || 33|| ##
+That holy devotee, who prostrates to Lord Guha, reciting the Bhujanga stotra daily, with devotion, will be blessed with good sons, good wife, wealth and long life, and at end of his life, will attain eternal bliss with Lord Skanda.
+
+##
+|| iti shrImachCha~NkarabhagavataH kR^itau
+     shrIsubrahmaNyabhuja~NgaM sampUrNam || ##
+
+Encoded and proofread by
+Ravishankar Mayavaram, P. P. Narayanaswami, Karthik Raman
+##
+\chapter{mUlam}
+sadA bAlarUpA.api vighnAdrihantrI
+   mahAdantivaktrA.api pa~nchAsyamAnyA |
+vidhIndrAdimR^igyA gaNeshAbhidhA me
+   vidhattAM shriyaM kA.api kalyANamUrtiH || 1||
+na jAnAmi shabdaM na jAnAmi chArthaM
+   na jAnAmi padyaM na jAnAmi gadyam |
+chidekA ShaDAsyA hR^idi dyotate me
+   mukhAnniHsarante girashchApi chitram || 2||
+mayUrAdhirUDhaM mahAvAkyagUDhaM
+   manohAridehaM mahachchittageham |
+mahIdevadevaM mahAvedabhAvaM
+   mahAdevabAlaM bhaje lokapAlam || 3||
+yadA sannidhAnaM gatA mAnavA me
+   bhavAmbhodhipAraM gatAste tadaiva |
+iti vya~njayansindhutIre ya Aste
+   tamIDe pavitraM parAshaktiputram || 4||
+yathAbdhestara~NgA layaM yAnti tu~NgA\-
+   stathaivApadaH sannidhau sevatAM me |
+itIvormipa~NktIrnR^iNAM darshayantaM
+   sadA bhAvaye hR^itsaroje guhaM tam || 5||
+girau mannivAse narA ye.adhirUDhA\-
+   stadA parvate rAjate te.adhirUDhAH |
+itIva bruvangandhashailAdhirUDhaH
+   sa devo mude me sadA ShaNmukho.astu || 6||
+mahAmbhodhitIre mahApApachore
+   munIndrAnukUle sugandhAkhyashaile |
+guhAyAM vasantaM svabhAsA lasantaM
+   janArtiM harantaM shrayAmo guhaM tam || 7||
+lasatsvarNagehe nR^iNAM kAmadohe
+   sumastomasa~nChannamANikyama~nche |
+samudyatsahasrArkatulyaprakAshaM
+   sadA bhAvaye kArtikeyaM suresham || 8||
+raNaddha.nsake ma~njule.atyantashoNe
+   manohArilAvaNyapIyUShapUrNe |
+manaHShaT.hpado me bhavakleshataptaH
+   sadA modatAM skanda te pAdapadme || 9||
+suvarNAbhadivyAmbarairbhAsamAnAM
+   kvaNatki~NkiNImekhalAshobhamAnAm |
+lasaddhemapaTTena vidyotamAnAM
+   kaTiM bhAvaye skanda te dIpyamAnAm ||  10 ||
+pulindeshakanyAghanAbhogatu~Nga\-
+   stanAli~NganAsaktakAshmIrarAgam |
+namasyAmyahaM tArakAre tavoraH
+   svabhaktAvane sarvadA sAnurAgam || 11||
+vidhau kL^iptadaNDAn svalIlAdhR^itANDA\-
+   nnirastebhashuNDAn dviShatkAladaNDAn |
+hatendrAriShaNDA~njagattrANashauNDAn
+   sadA te prachaNDAn shraye bAhudaNDAn || 12||
+sadA shAradAH ShaNmR^igA~NkA yadi syuH
+   samudyanta eva sthitAshchetsamantAt |
+sadA pUrNabimbAH kala~Nkaishcha hInA\-
+   stadA tvanmukhAnAM bruve skanda sAmyam || 13||
+sphuranmandahAsaiH saha.nsAni cha~ncha\-
+   tkaTAkShAvalIbhR^i~Ngasa~NghojjvalAni |
+sudhAsyandibimbAdharANIshasUno
+   tavAlokaye ShaNmukhAmbhoruhANi || 14||
+vishAleShu karNAntadIrgheShvajasraM
+   dayAsyandiShu dvAdashasvIkShaNeShu |
+mayIShatkaTAkShaH sakR^itpAtitashche\-
+   dbhavette dayAshIla kA nAma hAniH || 15||
+sutA~Ngodbhavo me.asi jIveti ShaDdhA
+   japanmantramIsho mudA jighrate yAn |
+jagadbhArabhR^idbhyo jagannAtha tebhyaH
+   kirITojjvalebhyo namo mastakebhyaH || 16||
+sphuradratnakeyUrahArAbhirAma\-
+   shchalatkuNDalashrIlasadgaNDabhAgaH |
+kaTau pItavAsAH kare chArushaktiH
+   purastAnmamAstAM purArestanUjaH || 17||
+ihAyAhi vatseti hastAnprasAryA\-
+   hvayatyAdarAchCha~Nkare mAtura~NkAt |
+samutpatya tAtaM shrayantaM kumAraM
+   harAshliShTagAtraM bhaje  bAlamUrtim || 18||
+kumAreshasUno guha skanda senA\-
+   pate shaktipANe mayUrAdhirUDha |
+pulindAtmajAkAnta bhaktArtihArin
+   prabho tArakAre sadA rakSha mAM tvam ||  19 ||
+prashAntendriye naShTasa.nGYe vicheShTe
+   kaphodgArivaktre bhayotkampigAtre |
+prayANonmukhe mayyanAthe tadAnIM
+   drutaM me dayAlo bhavAgre guha tvam || 20||
+kR^itAntasya dUteShu chaNDeShu kopA\-
+   ddaha chChinddhi bhinddhIti mAM tarjayatsu |
+mayUraM samAruhya mA bhairiti tvaM
+   puraH shaktipANirmamAyAhi shIghram || 21||
+praNamyAsakR^itpAdayoste patitvA
+   prasAdya prabho prArthaye.anekavAram |
+na vaktuM kShamo.ahaM tadAnIM kR^ipAbdhe
+   na kAryAntakAle manAgapyupekShA || 22||
+sahasrANDabhoktA tvayA shUranAmA
+   hatastArakaH si.nhavaktrashcha daityaH |
+mamAntarhR^idisthaM manaHkleshamekaM
+   na ha.nsi prabho kiM karomi kva yAmi ||  23 ||
+ahaM sarvadA duHkhabhArAvasanno
+   bhavAndInabandhustvadanyaM na yAche |
+bhavadbhaktirodhaM sadA kL^iptabAdhaM
+   mamAdhiM drutaM nAshayomAsuta tvam ||  24 ||
+apasmArakuShThakShayArshaH prameha\-
+   jvaronmAdagulmAdirogA mahAntaH |
+pishAchAshcha sarve bhavatpatrabhUtiM
+   vilokya kShaNAttArakAre dravante || 25||
+dR^ishi skandamUrtiH shrutau skandakIrti\-
+   rmukhe me pavitraM sadA tachcharitram |
+kare tasya kR^ityaM vapustasya bhR^ityaM
+   guhe santu lInA mamAsheShabhAvAH || 26||
+munInAmutAho nR^iNAM bhaktibhAjA\-
+   mabhIShTapradAH santi sarvatra devAH |
+nR^iNAmantyajAnAmapi svArthadAne
+   guhAddevamanyaM na jAne na jAne || 27||
+kalatraM sutA bandhuvargaH pashurvA
+   naro vAtha nAri gR^ihe ye madIyAH |
+yajanto namantaH stuvanto bhavantaM
+   smarantashcha te santu sarve kumAra || 28||
+mR^igAH pakShiNo da.nshakA ye cha duShTA\-
+   stathA vyAdhayo bAdhakA ye mada~Nge |
+bhavachChaktitIkShNAgrabhinnAH sudUre
+   vinashyantu te chUrNitakrau~nchashaila || 29||
+janitrI pitA cha svaputrAparAdhaM
+   sahete na kiM devasenAdhinAtha |
+ahaM chAtibAlo bhavAn lokatAtaH
+   kShamasvAparAdhaM samastaM mahesha || 30||
+namaH kekine shaktaye chApi tubhyaM
+   namashChAga tubhyaM namaH kukkuTAya |
+namaH sindhave sindhudeshAya tubhyaM
+   punaH skandamUrte namaste namo.astu || 31||
+jayAnandabhUma~njayApAradhAma\-
+   ~njayAmoghakIrte jayAnandamUrte |
+jayAnandasindho jayAsheShabandho
+   jaya tvaM sadA muktidAneshasUno || 32||
+bhuja~NgAkhyavR^ittena kL^iptaM stavaM yaH
+   paThedbhaktiyukto guhaM sampraNamya |
+suputrAnkalatraM dhanaM dIrghamAyu\-
+   rlabhetskandasAyujyamante naraH saH || 33||
+
+|| iti shrImachCha~NkarabhagavataH kR^itau
+     shrIsubrahmaNyabhuja~NgaM sampUrNam || ##
+
+Encoded and proofread by
+Ravishankar Mayavaram, P. P. Narayana swami swami@math.mun.ca, Karthik Raman
+
+\medskip\hrule\obeylines
+
+Please send corrections to sanskrit@cheerful.com
+Last updated \today
+https://sanskritdocuments.org
+
+\end{document}

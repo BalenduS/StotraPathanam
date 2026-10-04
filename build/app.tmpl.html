@@ -1,0 +1,265 @@
+<title>Stotra Pathashala</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&family=Tiro+Telugu&family=Mukta:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Layout: a single reading column, like a pothi page — chant text large and centred on its own ground, meaning set below in a quieter serif. */
+:root{
+  --ground:#F3F1EE;        /* vibhuti ash */
+  --leaf:#FBFAF8;          /* reading surface */
+  --ink:#1E1B26;           /* lamp-black ink */
+  --muted:#6B6573;
+  --rule:#DEDAD5;
+  --kumkum:#A8231A;        /* accent: kumkum red */
+  --kumkum-soft:#F4E2DF;
+  --haldi:#B87A00;         /* turmeric, for "learning" state */
+  --haldi-soft:#F6EBD3;
+  --done:#2F6B45;          /* memorised */
+  --done-soft:#E0EDE4;
+  --f-dev:"Tiro Devanagari Sanskrit","Noto Serif Devanagari","Kohinoor Devanagari",serif;
+  --f-tel:"Tiro Telugu","Noto Serif Telugu","Kohinoor Telugu",serif;
+  --f-ui:"Mukta","Segoe UI",system-ui,sans-serif;
+  --f-read:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --chant:1.38rem;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ground:#16141C;--leaf:#1F1C26;--ink:#ECE7E1;--muted:#A49EAD;--rule:#34303D;
+  --kumkum:#F08A70;--kumkum-soft:#3A2324;--haldi:#E2B14A;--haldi-soft:#36301F;--done:#7FC79A;--done-soft:#1E3326;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ground:#16141C;--leaf:#1F1C26;--ink:#ECE7E1;--muted:#A49EAD;--rule:#34303D;
+  --kumkum:#F08A70;--kumkum-soft:#3A2324;--haldi:#E2B14A;--haldi-soft:#36301F;--done:#7FC79A;--done-soft:#1E3326;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{background:var(--ground);color:var(--ink)}
+body{font-family:var(--f-ui);font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%}
+.wrap{max-width:640px;margin:0 auto;padding-inline:16px;padding-block:12px 96px}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+button:focus-visible,a:focus-visible{outline:2px solid var(--kumkum);outline-offset:2px;border-radius:6px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--ground);display:flex;align-items:center;gap:8px;padding-block:8px;margin-inline:-16px;padding-inline:16px;border-bottom:1px solid transparent}
+.bar.scrolled{border-bottom-color:var(--rule)}
+.bar .back{display:flex;align-items:center;gap:4px;font-weight:600;color:var(--kumkum);min-height:40px;padding-right:8px}
+.bar .t{flex:1;min-width:0;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg{display:inline-flex;background:var(--leaf);border:1px solid var(--rule);border-radius:999px;padding:2px}
+.seg button{padding:5px 11px;border-radius:999px;font-size:.86rem;font-weight:600;color:var(--muted);min-height:32px}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--leaf)}
+.seg .d{font-family:var(--f-dev);font-weight:400;font-size:1rem}
+.seg .te{font-family:var(--f-tel);font-weight:400;font-size:1rem}
+
+/* home */
+.masthead{padding-block:20px 8px;display:grid;gap:6px}
+.masthead h1{font-family:var(--f-dev);font-weight:400;font-size:2.2rem;line-height:1.1}
+.masthead p{margin:0;color:var(--muted);max-width:52ch}
+.tripundra{display:grid;gap:4px;width:56px;margin-bottom:6px}
+.tripundra i{display:block;height:3px;border-radius:2px;background:var(--muted);opacity:.55}
+.tripundra i:nth-child(2){position:relative}
+.tripundra i:nth-child(2)::after{content:"";position:absolute;left:50%;top:50%;width:7px;height:7px;border-radius:50%;background:var(--kumkum);transform:translate(-50%,-50%)}
+.resume{margin-top:14px;display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--kumkum-soft);border-radius:12px;text-align:left;width:100%}
+.resume b{display:block}
+.resume span{font-size:.88rem;color:var(--muted)}
+.resume .go{margin-left:auto;font-weight:700;color:var(--kumkum);white-space:nowrap}
+.list{display:grid;gap:12px;margin-top:18px}
+.stotra{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center;text-align:left;width:100%;background:var(--leaf);border:1px solid var(--rule);border-radius:14px;padding:16px}
+.stotra .nm{font-size:1.15rem;font-weight:700}
+.stotra .sc{font-size:1.25rem;line-height:1.3}
+.stotra .meta{font-size:.86rem;color:var(--muted);grid-column:1/-1}
+.ring{grid-row:1/3;grid-column:2;width:54px;height:54px;position:relative}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring .num{position:absolute;inset:0;display:grid;place-items:center;font-size:.78rem;font-weight:700;font-variant-numeric:tabular-nums}
+.bars{grid-column:1/-1;display:flex;gap:2px;margin-top:6px}
+.bars i{flex:1;height:4px;border-radius:2px;background:var(--rule)}
+.bars i.l{background:var(--haldi)} .bars i.m{background:var(--done)}
+.foot{margin-top:28px;font-size:.84rem;color:var(--muted);display:grid;gap:6px}
+.foot a{color:var(--kumkum)}
+
+/* stotra page */
+.head{padding-block:14px 6px;display:grid;gap:6px}
+.head .sc{font-size:2rem;line-height:1.2}
+.head h2{font-size:1.05rem;font-weight:600;color:var(--muted)}
+.intro{font-family:var(--f-read);font-size:1.02rem;line-height:1.6;max-width:62ch;margin:6px 0 0}
+.refrain{margin-top:10px;padding:12px 14px;border-left:3px solid var(--kumkum);background:var(--leaf);border-radius:0 10px 10px 0;font-family:var(--f-read);font-size:.98rem}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.84rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--leaf);border:1px solid var(--rule);font-variant-numeric:tabular-nums}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:var(--rule)}
+.chip.l .dot{background:var(--haldi)} .chip.m .dot{background:var(--done)}
+.group{margin-top:22px}
+.group h3{font-size:.95rem;font-weight:700;display:flex;justify-content:space-between;gap:12px}
+.group h3 small{font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.group .theme{font-family:var(--f-read);font-size:.92rem;color:var(--muted);margin:4px 0 0}
+.units{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:8px;margin-top:10px}
+.u{height:44px;border-radius:10px;background:var(--leaf);border:1px solid var(--rule);font-weight:600;font-size:.86rem;font-variant-numeric:tabular-nums}
+.u.l{background:var(--haldi-soft);border-color:var(--haldi);color:var(--ink)}
+.u.m{background:var(--done-soft);border-color:var(--done)}
+.startrow{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{min-height:44px;padding:0 18px;border-radius:12px;font-weight:700;background:var(--ink);color:var(--leaf)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+
+/* verse reader */
+.reader{margin-top:8px}
+.pos{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-block:6px}
+.pos .g{font-size:.84rem;color:var(--muted);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pos .n{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.progress{height:3px;background:var(--rule);border-radius:2px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--kumkum);transition:width .25s}
+.leaf{margin-top:12px;background:var(--leaf);border:1px solid var(--rule);border-radius:16px;padding:22px 18px;position:relative}
+.leaf::before,.leaf::after{content:"";position:absolute;top:50%;width:8px;height:8px;border-radius:50%;border:1px solid var(--rule);background:var(--ground);transform:translateY(-50%)}
+.leaf::before{left:8px}.leaf::after{right:8px}
+.chant{display:grid;gap:14px;text-align:center}
+.blk{display:grid;gap:4px}
+.blk + .blk{padding-top:12px;border-top:1px dashed var(--rule)}
+.line{font-size:var(--chant);line-height:1.65;overflow-wrap:anywhere;border-radius:8px;transition:filter .2s, background .2s}
+.line.dev{font-family:var(--f-dev)}
+.line.tel{font-family:var(--f-tel)}
+.both .blk.tel .line{font-size:calc(var(--chant)*.92);color:var(--muted)}
+.hidden .line{filter:blur(7px);background:var(--ground);cursor:pointer;user-select:none}
+.hidden .line.shown{filter:none;background:transparent}
+.hidden .line.first{filter:none;background:transparent}
+.hint{font-size:.82rem;color:var(--muted);text-align:center;margin-top:12px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;justify-content:center}
+.tool{min-height:40px;padding:0 14px;border-radius:999px;border:1px solid var(--rule);background:var(--leaf);font-weight:600;font-size:.88rem}
+.tool[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--leaf)}
+.meaning{margin-top:16px;display:grid;gap:12px}
+.meaning p{margin:0;font-family:var(--f-read);font-size:1.06rem;line-height:1.62;max-width:62ch}
+.gloss{display:grid;gap:0;border-top:1px solid var(--rule)}
+.gloss div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px;padding:8px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.gloss .w{font-size:1.1rem;line-height:1.4;overflow-wrap:anywhere}
+.gloss .w.dev{font-family:var(--f-dev)} .gloss .w.tel{font-family:var(--f-tel)}
+.gloss .gm{font-family:var(--f-read);font-size:.95rem;color:var(--muted)}
+.status{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}
+.status button{min-height:46px;border-radius:12px;border:1px solid var(--rule);background:var(--leaf);font-weight:700}
+.status .l[aria-pressed="true"]{background:var(--haldi-soft);border-color:var(--haldi)}
+.status .m[aria-pressed="true"]{background:var(--done-soft);border-color:var(--done);color:var(--done)}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--ground);border-top:1px solid var(--rule);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+.nav .in{max-width:640px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.nav button{min-height:48px;border-radius:12px;font-weight:700;border:1px solid var(--rule);background:var(--leaf)}
+.nav .next{background:var(--kumkum);color:#fff;border-color:var(--kumkum)}
+:root[data-theme="dark"] .nav .next{color:#1A0E0C}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .nav .next{color:#1A0E0C}}
+.nav button:disabled{opacity:.4}
+.size{display:inline-flex;gap:4px}
+.size button{width:36px;height:36px;border-radius:50%;border:1px solid var(--rule);background:var(--leaf);font-weight:700}
+.settings{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-top:10px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap" id="app"></div>
+<nav class="nav" id="nav" hidden><div class="in"><button id="prev" type="button">← Previous</button><button id="next" class="next" type="button">Next →</button></div></nav>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function(){
+const DATA=JSON.parse(document.getElementById('data').textContent);
+const KEY='stotra-pathashala-v1';
+let S={script:'dev',meaning:true,words:true,size:1.38,prog:{},last:null};
+try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s)S=Object.assign(S,s)}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const app=document.getElementById('app'),nav=document.getElementById('nav');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function flat(st){const out=[];st.groups.forEach((g,gi)=>g.units.forEach((u,ui)=>out.push({g,gi,u,ui,i:out.length})));return out}
+const FLAT={};DATA.forEach(s=>FLAT[s.id]=flat(s));
+const byId=id=>DATA.find(s=>s.id===id);
+const st=(sid,i)=>((S.prog[sid]||{})[i])||0; // 0 new,1 learning,2 memorised
+function setSt(sid,i,v){S.prog[sid]=S.prog[sid]||{};if(v)S.prog[sid][i]=v;else delete S.prog[sid][i];save()}
+function counts(sid){const n=FLAT[sid].length;let l=0,m=0;FLAT[sid].forEach(x=>{const v=st(sid,x.i);if(v===1)l++;if(v===2)m++});return{n,l,m}}
+document.documentElement.style.setProperty('--chant',S.size+'rem');
+
+function scriptSeg(){return `<div class="seg" role="group" aria-label="Script">
+ <button type="button" data-script="dev" aria-pressed="${S.script==='dev'}"><span class="d">देव</span></button>
+ <button type="button" data-script="tel" aria-pressed="${S.script==='tel'}"><span class="te">తెలుగు</span></button>
+ <button type="button" data-script="both" aria-pressed="${S.script==='both'}">Both</button></div>`}
+function titleIn(s){return S.script==='tel'?`<span style="font-family:var(--f-tel)">${s.tel}</span>`:`<span style="font-family:var(--f-dev)">${s.dev}</span>`}
+
+/* ---------- Home ---------- */
+function home(){
+  nav.hidden=true;
+  let resume='';
+  if(S.last&&byId(S.last.sid)){const s=byId(S.last.sid),x=FLAT[s.id][S.last.i];if(x)resume=`<button class="resume" type="button" data-open="${s.id}" data-i="${x.i}"><div><b>Continue ${esc(s.name)}</b><span>${esc(x.g.name)} · ${esc(x.u.label)}</span></div><span class="go">Resume →</span></button>`}
+  app.innerHTML=`<div class="bar"><div class="t"></div>${scriptSeg()}</div>
+  <header class="masthead"><div class="tripundra" aria-hidden="true"><i></i><i></i><i></i></div>
+   <h1>${S.script==='tel'?'<span style="font-family:var(--f-tel)">స్తోత్ర పాఠశాల</span>':'स्तोत्र पाठशाला'}</h1>
+   <p>Four stotras, verse by verse, in Devanagari and Telugu with meanings. Mark each verse as you learn it and memorise it.</p>${resume}</header>
+  <div class="list">${DATA.map(s=>{const c=counts(s.id),pct=c.n?c.m/c.n:0,r=22,C=2*Math.PI*r;
+   const bars=s.groups.map(g=>{const xs=FLAT[s.id].filter(x=>x.g===g);const m=xs.filter(x=>st(s.id,x.i)===2).length,l=xs.filter(x=>st(s.id,x.i)===1).length;return `<i class="${m===xs.length?'m':(m||l)?'l':''}" title="${esc(g.name)}"></i>`}).join('');
+   return `<button class="stotra" type="button" data-open="${s.id}">
+    <div><div class="nm">${esc(s.name)}</div><div class="sc">${titleIn(s)}</div></div>
+    <div class="ring" aria-label="${c.m} of ${c.n} memorised"><svg viewBox="0 0 54 54"><circle cx="27" cy="27" r="${r}" fill="none" stroke="var(--rule)" stroke-width="5"/><circle cx="27" cy="27" r="${r}" fill="none" stroke="var(--done)" stroke-width="5" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C*(1-pct)}"/></svg><span class="num">${c.m}/${c.n}</span></div>
+    <div class="meta">${esc(s.by)} · ${c.n} ${s.id==='rudram'?'sections':'verses'}${c.l?` · ${c.l} learning`:''}</div>
+    <div class="bars" aria-hidden="true">${bars}</div></button>`}).join('')}</div>
+  <div class="foot"><span>Sanskrit text from <a href="https://sanskritdocuments.org" target="_blank" rel="noopener">sanskritdocuments.org</a>, with a few typographical corrections. Rudram is shown without svara marks; learn its chanting from a teacher or trusted recording.</span><span>Progress is saved in this browser on this device.</span></div>`;
+  bind();
+}
+
+/* ---------- Stotra overview ---------- */
+function overview(sid){
+  nav.hidden=true;const s=byId(sid),c=counts(sid);
+  let gi=0;
+  app.innerHTML=`<div class="bar"><button class="back" type="button" data-home>← All</button><div class="t"></div>${scriptSeg()}</div>
+  <header class="head"><div class="sc">${titleIn(s)}</div><h2>${esc(s.name)} · ${esc(s.by)}</h2>${s.note?`<p class="intro" style="margin:0;color:var(--muted)">${esc(s.note)}</p>`:''}<p class="intro">${esc(s.intro)}</p>
+  ${s.refrain?`<div class="refrain"><span class="eyebrow">Refrain</span><br>${esc(s.refrain)}</div>`:''}
+  <div class="stats"><span class="chip m"><span class="dot"></span>${c.m} memorised</span><span class="chip l"><span class="dot"></span>${c.l} learning</span><span class="chip"><span class="dot"></span>${c.n-c.m-c.l} new</span></div>
+  <div class="startrow"><button class="btn" type="button" data-learn="${firstUnlearned(sid)}">${c.m+c.l?'Continue learning':'Start at the beginning'}</button>${c.l?`<button class="btn ghost" type="button" data-review>Review ${c.l} in progress</button>`:''}</div></header>
+  ${s.groups.map(g=>{const xs=FLAT[sid].filter(x=>x.g===g);const m=xs.filter(x=>st(sid,x.i)===2).length;
+   return `<section class="group"><h3><span>${esc(g.name)}</span><small>${m}/${xs.length}</small></h3>${g.theme?`<p class="theme">${esc(g.theme)}</p>`:''}
+   <div class="units">${xs.map(x=>{const v=st(sid,x.i);const lab=x.u.label.replace(/^Verse /,'').replace(/^Anuvaka /,'').replace(/^Closing ?/,'C').replace('Phalashruti','Phala');return `<button type="button" class="u ${v===1?'l':v===2?'m':''}" data-learn="${x.i}" aria-label="${esc(x.u.label)}${v===2?', memorised':v===1?', learning':''}">${esc(lab||'C')}</button>`}).join('')}</div></section>`}).join('')}`;
+  bind(sid);window.scrollTo(0,0);
+}
+function firstUnlearned(sid){const f=FLAT[sid].find(x=>st(sid,x.i)!==2);return f?f.i:0}
+
+/* ---------- Verse reader ---------- */
+let R={sid:null,i:0,hide:false,list:null};
+function reader(sid,i,list){
+  R={sid,i,hide:false,list:list||null};S.last={sid,i};save();drawReader();window.scrollTo(0,0);
+}
+function lines(u,which){return `<div class="blk ${which}">${u[which].map((l,k)=>`<div class="line ${which}${k===0?' first':''}" data-line>${esc(l)}</div>`).join('')}</div>`}
+function drawReader(){
+  const s=byId(R.sid),arr=FLAT[R.sid],x=arr[R.i],u=x.u,v=st(R.sid,R.i);
+  const seq=R.list||arr.map(a=>a.i),pos=seq.indexOf(R.i);
+  const chant=S.script==='both'?lines(u,'dev')+lines(u,'tel'):lines(u,S.script);
+  const gl=u.g&&S.words?`<div class="gloss">${u.g.map(w=>`<div><span class="w ${S.script==='tel'?'tel':'dev'}">${esc(S.script==='tel'?w.tel:w.dev)}</span><span class="gm">${esc(w.m)}</span></div>`).join('')}</div>`:'';
+  app.innerHTML=`<div class="bar"><button class="back" type="button" data-ov="${s.id}">← ${esc(s.name)}</button><div class="t"></div></div>
+  <div class="settings">${scriptSeg()}<div class="size" role="group" aria-label="Text size"><button type="button" data-size="-1" aria-label="Smaller text">A−</button><button type="button" data-size="1" aria-label="Larger text">A+</button></div></div>
+  <div class="reader">
+   <div class="pos"><span class="g">${esc(x.g.name)}${R.list?' · Review':''}</span><span class="n">${esc(u.label)} · ${pos+1}/${seq.length}</span></div>
+   <div class="progress"><i style="width:${(pos+1)/seq.length*100}%"></i></div>
+   <article class="leaf"><div class="chant ${S.script==='both'?'both':''} ${R.hide?'hidden':''}" id="chant">${chant}</div>
+   ${R.hide?'<p class="hint">Recite from memory. Tap a line to check it.</p>':''}</article>
+   <div class="tools">
+    <button class="tool" type="button" data-hide aria-pressed="${R.hide}">${R.hide?'Show text':'Test recall'}</button>
+    <button class="tool" type="button" data-meaning aria-pressed="${S.meaning}">Meaning</button>
+    ${u.g?`<button class="tool" type="button" data-words aria-pressed="${S.words}">Word meanings</button>`:''}
+   </div>
+   ${S.meaning?`<section class="meaning"><span class="eyebrow">Meaning</span><p>${esc(u.m)}</p>${gl}</section>`:(gl?`<section class="meaning">${gl}</section>`:'')}
+   <div class="status"><button type="button" class="l" data-st="1" aria-pressed="${v===1}">${v===1?'✓ ':''}Learning</button><button type="button" class="m" data-st="2" aria-pressed="${v===2}">${v===2?'✓ ':''}Memorised</button></div>
+  </div>`;
+  nav.hidden=false;
+  document.getElementById('prev').disabled=pos<=0;
+  const nx=document.getElementById('next');nx.disabled=pos>=seq.length-1;nx.textContent=pos>=seq.length-1?'Last':'Next →';
+  bind(R.sid);
+}
+function step(d){const seq=R.list||FLAT[R.sid].map(a=>a.i),p=seq.indexOf(R.i)+d;if(p<0||p>=seq.length)return;R.i=seq[p];R.hide=false;S.last={sid:R.sid,i:R.i};save();drawReader();window.scrollTo(0,0)}
+document.getElementById('prev').onclick=()=>step(-1);
+document.getElementById('next').onclick=()=>step(1);
+
+function rerender(){if(nav.hidden===false&&R.sid)drawReader();else if(cur.view==='ov')overview(cur.sid);else home()}
+let cur={view:'home'};
+function bind(sid){
+  app.querySelectorAll('[data-script]').forEach(b=>b.onclick=()=>{S.script=b.dataset.script;save();rerender()});
+  app.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>{const id=b.dataset.open;if(b.dataset.i!==undefined){cur={view:'ov',sid:id};reader(id,+b.dataset.i)}else{cur={view:'ov',sid:id};overview(id)}});
+  app.querySelectorAll('[data-home]').forEach(b=>b.onclick=()=>{cur={view:'home'};R.sid=null;home();window.scrollTo(0,0)});
+  app.querySelectorAll('[data-ov]').forEach(b=>b.onclick=()=>{cur={view:'ov',sid:b.dataset.ov};R.sid=null;overview(b.dataset.ov)});
+  app.querySelectorAll('[data-learn]').forEach(b=>b.onclick=()=>reader(sid,+b.dataset.learn));
+  app.querySelectorAll('[data-review]').forEach(b=>b.onclick=()=>{const l=FLAT[sid].filter(x=>st(sid,x.i)===1).map(x=>x.i);if(l.length)reader(sid,l[0],l)});
+  app.querySelectorAll('[data-hide]').forEach(b=>b.onclick=()=>{R.hide=!R.hide;drawReader()});
+  app.querySelectorAll('[data-meaning]').forEach(b=>b.onclick=()=>{S.meaning=!S.meaning;save();drawReader()});
+  app.querySelectorAll('[data-words]').forEach(b=>b.onclick=()=>{S.words=!S.words;save();drawReader()});
+  app.querySelectorAll('[data-size]').forEach(b=>b.onclick=()=>{S.size=Math.min(2.2,Math.max(1,+(S.size+(+b.dataset.size)*0.12).toFixed(2)));document.documentElement.style.setProperty('--chant',S.size+'rem');save()});
+  app.querySelectorAll('[data-st]').forEach(b=>b.onclick=()=>{const v=+b.dataset.st;setSt(R.sid,R.i,st(R.sid,R.i)===v?0:v);drawReader()});
+  app.querySelectorAll('.hidden [data-line]').forEach(l=>l.onclick=()=>l.classList.toggle('shown'));
+}
+window.addEventListener('scroll',()=>{const b=app.querySelector('.bar');if(b)b.classList.toggle('scrolled',window.scrollY>4)},{passive:true});
+const h=(location.hash||'').slice(1);
+if(h&&byId(h)){cur={view:'ov',sid:h};overview(h)}else home();
+})();
+</script>
