@@ -1,11 +1,12 @@
 # Stotra Pathashala
 
-A small web app for learning six stotras verse by verse, in Devanagari and Telugu, with meanings.
+A small web app for learning seven stotras verse by verse, in Devanagari and Telugu, with meanings.
 
 **Live:** https://balendus.github.io/StotraPathanam/
 
 | Stotra | Source | Units |
 |---|---|---|
+| Ganesha Pancharatnam | Adi Shankaracharya | 5 verses + phalashruti |
 | Sri Rudram (Namakam + Chamakam) | Krishna Yajur Veda, Taittiriya Samhita 4.5 and 4.7 | 73 sections |
 | Guru Ashtakam | Adi Shankaracharya | 9 verses |
 | Aditya Hrudayam | Valmiki Ramayana, Yuddha Kanda | 31 verses |
@@ -16,7 +17,7 @@ A small web app for learning six stotras verse by verse, in Devanagari and Telug
 ## Features
 
 - Switch between Devanagari, Telugu, or both
-- Meaning for every verse, plus key-word meanings for Guru Ashtakam, Aditya Hrudayam, Karthikeya Bhujangam, Shiva Stuti and Subrahmanya Ashtakam
+- Meaning for every verse, plus key-word meanings for Ganesha Pancharatnam, Guru Ashtakam, Aditya Hrudayam, Karthikeya Bhujangam, Shiva Stuti and Subrahmanya Ashtakam
 - **Test recall** mode: blurs the verse except its first line; tap a line to check yourself
 - Mark verses as *Learning* or *Memorised*, review the ones in progress, resume where you left off
 - Adjustable text size, light and dark themes

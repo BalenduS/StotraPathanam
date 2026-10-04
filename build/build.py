@@ -4,6 +4,7 @@ from m_guru import GURU; from m_aditya import ADITYA; from m_bhujangam import BH
 from m_rudram import *
 from m_shambhu import SHAMBHU
 from m_subashtakam import SUBASHT
+from m_ganesha import GANESHA
 raw=json.load(open('raw.json')); rr=json.load(open('rudram_raw.json'))
 FIX=[('.h',''),('\\','')]
 def prep(s):
@@ -89,8 +90,13 @@ for i,(r,(m,g)) in enumerate(zip(raw['subashtakam'],SUBASHT['v'])):
         for k in (1,3): u['dev'][k]+=' ॥'; u['tel'][k]+=' ॥'
         units.append(u)
 out.append({'id':'subashtakam','name':'Subrahmanya Ashtakam','dev':'सुब्रह्मण्याष्टकम्','tel':'సుబ్రహ్మణ్యాష్టకమ్','by':'Adi Shankaracharya','intro':SUBASHT['intro'],'refrain':SUBASHT['refrain'],'note':'Also known as Subrahmanya Karavalamba Stotram.','groups':[{'name':'Verses','units':units}]})
+# Ganesha Pancharatnam
+units=[]
+for i,(r,(m,g)) in enumerate(zip(raw['ganesha'],GANESHA['v'])):
+    units.append(mkunit(r['it'],'Verse %d'%(i+1) if i<5 else 'Phalashruti',m,g,num(i+1)))
+out.append({'id':'ganesha','name':'Ganesha Pancharatnam','dev':'गणेशपञ्चरत्नम्','tel':'గణేశపఞ్చరత్నమ్','by':'Adi Shankaracharya','intro':GANESHA['intro'],'note':'Ganesha Pancharatna Stotram, beginning mudākarātta modakaṃ.','groups':[{'name':'Verses','units':units}]})
 # reorder: Rudram, Guru, Aditya, Bhujangam (user's order)
-order={'rudram':0,'guru':1,'aditya':2,'bhujangam':3,'shambhu':4,'subashtakam':5}
+order={'ganesha':-1,'rudram':0,'guru':1,'aditya':2,'bhujangam':3,'shambhu':4,'subashtakam':5}
 out.sort(key=lambda x:order[x['id']])
 json.dump(out,open('data.json','w'),ensure_ascii=False,separators=(',',':'))
 for s in out:

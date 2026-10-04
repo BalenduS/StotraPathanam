@@ -74,6 +74,16 @@ for n,ch in verses_from(b, r'\|\|\s*(\d+)\s*\|\|'):
 tail=[l.strip() for l in b.rsplit('|| 8||',1)[1].split('\n') if l.strip()]
 sa.append({'n':9,'it':tail})
 res['subashtakam']=sa
+
+# Ganesha Pancharatnam (Shankara)
+b=body('ganesha5.itx')
+b=b.split('gaNeshAya namaH ||',1)[1].split('iti shrIsha')[0]
+b=re.sub(r'\s*\([^)]*\)','',b)
+b=clean(b).replace('nidhIshwaraM','nidhIshvaraM').replace('gajeshwaraM','gajeshvaraM')
+gv=[]
+for n,ch in verses_from(b, r'\|\|\s*(\d+)\s*\|\|'):
+    gv.append({'n':int(n),'it':[l.strip() for l in ch.split('\n') if l.strip()]})
+res['ganesha']=gv
 json.dump(res,open('raw.json','w'),ensure_ascii=False,indent=1)
 for k,v in res.items():
     print(k,len(v))

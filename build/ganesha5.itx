@@ -1,0 +1,69 @@
+% Text title            : gaNeshapaMcharatnastotram
+% File name             : ganesha5.itx
+% Category              : pancharatna, ganesha, shankarAchArya
+% Location              : doc\_ganesha
+% Author                : shankarAchArya
+% Transliterated by     : M giridhar
+% Proofread by          : Karthik Chandan.P, Amith K Nagaraj (amithkn at rediffmail.com)
+% Description-comments  : mudgalapurANa
+% Latest update         : January 5, 2021
+% Send corrections to   : Sanskrit@cheerful.com
+%
+% This text is prepared by volunteers and is to be used for personal study 
+% and research. The file is not to be copied or reposted for promotion of 
+% any website or individuals or for commercial purpose without permission. 
+% Please help to maintain respect for volunteer spirit.
+%
+\documentstyle[11pt,multicol,itrans]{article}
+#include=ijag.inc
+#endwordvowel=.h
+\portraitwide
+\parindent=100pt                
+\let\usedvng=\Largedvng      % for 1 column     
+\pagenumbering{itrans} 
+\def\engtitle#1{\hrule\medskip\centerline{\LARGE #1}}
+\def\itxtitle#1{\medskip\centerline{\LARGEdvng #1}\medskip\hrule}
+\def\endtitles{\medskip\obeyspaceslines}
+%%
+\begin{document}
+\engtitle{.. shrIgaNeshapancharatnastotram ..}##
+\itxtitle{.. shrIgaNeshapa~ncharatnastotram ..}##\endtitles ##
+           shrIgaNeshAya namaH ||
+mudAkarAttamodakaM sadAvimuktisAdhakaM
+     kalAdharAvataMsakaM vilAsilokarakShakam | (vilAsilokara~njakam)
+anAyakaikanAyakaM vinAshitebhadaityakaM
+     natAshubhAshunAshakaM namAmi taM vinAyakam || 1|| 
+natetarAtibhIkaraM navoditArkabhAsvaraM
+     namatsurArinirjaraM natAdhikApaduddharam |
+sureshvaraM nidhIshwaraM gajeshwaraM gaNeshvaraM
+     maheshvaraM tamAshraye parAtparaM nirantaram || 2|| 
+samastalokasha~NkaraM nirastadaityaku~njaraM
+     daretarodaraM varaM varebhavaktramakSharam |
+kR^ipAkaraM kShamAkaraM mudAkaraM yashaskaraM
+     manaskaraM namaskR^itAM namaskaromi bhAsvaram || 3|| 
+aki~nchanArtimArjanaM chirantanoktibhAjanaM
+     purAripUrvanandanaM surArigarvacharvaNam |
+prapa~nchanAshabhIShaNaM dhana~njayAdibhUShaNaM
+     kapoladAnavAraNaM bhaje purANavAraNam || 4|| 
+nitAntakAntadantakAntimantakAntakAtmajaM
+     achintyarUpamantahInamantarAyakR^intanam |
+hR^idantare nirantaraM vasantameva yoginAM
+     tamekadantameva taM vichintayAmi santatam || 5|| 
+mahAgaNeshapa~ncharatnamAdareNa yo.anvahaM
+     prajalpati prabhAtake hR^idi smaran gaNeshvaram | (pragAyati prabhAtake)
+arogatAmadoShatAM susAhitIM suputratAM
+     samAhitAyuraShTabhUtimabhyupaiti so.achirAt || 6|| 
+iti shrIsha~NkarabhagavataH kR^itau shrIgaNeshapa~ncharatnastotraM sampUrNam ||
+##
+Encoded by M Giridhar
+Corrected by
+Karthik Chandan.P (kardan5380@yahoo.com)
+Amith K Nagaraj (amithkn@rediffmail.com)
+
+\medskip\hrule\obeylines
+
+Please send corrections to sanskrit at cheerful dot c om
+Last updated \today
+https://sanskritdocuments.org
+
+\end{document}
