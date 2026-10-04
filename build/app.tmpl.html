@@ -179,7 +179,7 @@ function home(){
   app.innerHTML=`<div class="bar"><div class="t"></div>${scriptSeg()}</div>
   <header class="masthead"><div class="tripundra" aria-hidden="true"><i></i><i></i><i></i></div>
    <h1>${S.script==='tel'?'<span style="font-family:var(--f-tel)">స్తోత్ర పాఠశాల</span>':'स्तोत्र पाठशाला'}</h1>
-   <p>Five stotras, verse by verse, in Devanagari and Telugu with meanings. Mark each verse as you learn it and memorise it.</p>${resume}</header>
+   <p>Six stotras, verse by verse, in Devanagari and Telugu with meanings. Mark each verse as you learn it and memorise it.</p>${resume}</header>
   <div class="list">${DATA.map(s=>{const c=counts(s.id),pct=c.n?c.m/c.n:0,r=22,C=2*Math.PI*r;
    const bars=s.groups.map(g=>{const xs=FLAT[s.id].filter(x=>x.g===g);const m=xs.filter(x=>st(s.id,x.i)===2).length,l=xs.filter(x=>st(s.id,x.i)===1).length;return `<i class="${m===xs.length?'m':(m||l)?'l':''}" title="${esc(g.name)}"></i>`}).join('');
    return `<button class="stotra" type="button" data-open="${s.id}">

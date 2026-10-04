@@ -3,6 +3,7 @@ from indic_transliteration import sanscript as S
 from m_guru import GURU; from m_aditya import ADITYA; from m_bhujangam import BHUJ
 from m_rudram import *
 from m_shambhu import SHAMBHU
+from m_subashtakam import SUBASHT
 raw=json.load(open('raw.json')); rr=json.load(open('rudram_raw.json'))
 FIX=[('.h',''),('\\','')]
 def prep(s):
@@ -10,6 +11,7 @@ def prep(s):
     s=re.sub(r'(\|\||\.\.)\s*\d*\s*(\|\||\.\.)\s*$','',s)   # trailing verse number
     s=re.sub(r'\|\|$','',s).strip()
     s=re.sub(r'\s\.\.$',' ||',s); s=re.sub(r'\s\.$',' |',s)
+    s=s.replace('\\!','')
     for a,b in FIX: s=s.replace(a,b)
     s=s.replace('<GM>','\u0001')
     return re.sub(r'\s+',' ',s).strip()
@@ -78,8 +80,17 @@ units=[]
 for i,(r,(m,g)) in enumerate(zip(raw['shambhu'],SHAMBHU['v'])):
     units.append(mkunit(r['it'],'Verse %d'%(i+1),m,g,num(i+1)))
 out.append({'id':'shambhu','name':'Shiva Stuti','dev':'शम्भुस्तुतिः','tel':'శమ్భుస్తుతిః','by':'Shri Rama · Brahma Purana','intro':SHAMBHU['intro'],'note':'Also known as Shambhu Stuti or Rama-krita Shiva Stotram.','groups':[{'name':'Verses','units':units}]})
+# Subrahmanya Ashtakam
+units=[]
+for i,(r,(m,g)) in enumerate(zip(raw['subashtakam'],SUBASHT['v'])):
+    if i<8: units.append(mkunit(r['it'],'Verse %d'%(i+1),m,g,num(i+1)))
+    else:
+        u=mkunit(r['it'],'Phalashruti',m,g)
+        for k in (1,3): u['dev'][k]+=' ॥'; u['tel'][k]+=' ॥'
+        units.append(u)
+out.append({'id':'subashtakam','name':'Subrahmanya Ashtakam','dev':'सुब्रह्मण्याष्टकम्','tel':'సుబ్రహ్మణ్యాష్టకమ్','by':'Adi Shankaracharya','intro':SUBASHT['intro'],'refrain':SUBASHT['refrain'],'note':'Also known as Subrahmanya Karavalamba Stotram.','groups':[{'name':'Verses','units':units}]})
 # reorder: Rudram, Guru, Aditya, Bhujangam (user's order)
-order={'rudram':0,'guru':1,'aditya':2,'bhujangam':3,'shambhu':4}
+order={'rudram':0,'guru':1,'aditya':2,'bhujangam':3,'shambhu':4,'subashtakam':5}
 out.sort(key=lambda x:order[x['id']])
 json.dump(out,open('data.json','w'),ensure_ascii=False,separators=(',',':'))
 for s in out:

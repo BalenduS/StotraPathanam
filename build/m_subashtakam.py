@@ -1,0 +1,24 @@
+SUBASHT = {
+ "intro": "Also called Subrahmanya Karavalamba Stotram, traditionally attributed to Adi Shankaracharya. Every verse ends with the same plea, 'vallIshanAtha mama dehi karAvalambam' — 'O Lord of Valli, give me the support of your hand.' It is short, musical and widely sung in Tamil Nadu, Andhra and Karnataka, especially on Tuesdays and Shashti.",
+ "refrain": "vallIshanAtha mama dehi karAvalambam — O Lord of Valli, give me the support of your hand (lift me up).",
+ "v": [
+  ("O Swaminatha, ocean of compassion, friend of the helpless; the sun that makes the lotus-face of Parvati and Shiva bloom; whose lotus feet are worshipped by Vishnu and the hosts of gods — O Lord of Valli, give me the support of your hand.",
+   [("he svAminAtha","O Swaminatha (lord, teacher of his father)"),("karuNAkara","maker of compassion"),("dInabandho","friend of the helpless"),("pArvatIshamukhapa~Nkaja","lotus-faces of Parvati and Shiva"),("padmabandho","O sun (friend of the lotus)"),("shrIshAdi","Vishnu and others"),("karAvalambam","support of the hand")]),
+  ("Son of the god of gods, leader of the hosts of gods; whose soft, lovely lotus feet are saluted by Indra; whose fame is sung by the divine sage Narada and great sages — O Lord of Valli, give me the support of your hand.",
+   [("devAdhidevasuta","son of the god of gods (Shiva)"),("devagaNAdhinAtha","commander of the divine hosts"),("devendravandya","saluted by Indra"),("mR^idupa~Nkajama~njupAda","soft, lovely lotus feet"),("nArada","the sage Narada"),("sugItakIrte","whose fame is well sung")]),
+  ("You who always delight in giving food, remover of all disease; who fulfil devotees' wishes by granting good fortune; whose true nature is declared by the Vedas, Agamas and Om — O Lord of Valli, give me the support of your hand.",
+   [("nityAnnadAnanirata","ever devoted to giving food"),("akhilarogahArin","remover of all diseases"),("bhAgyapradAna","granting fortune"),("bhaktakAma","devotees' desires"),("shR^ityAgamapraNavavAchya","described by Vedas, Agamas and Om"),("nijasvarUpa","own true form")]),
+  ("Destroyer of Krauncha and the chief of demons; whose divine hands are adorned with the spear, trident, bow and other weapons; who rides the king of peacocks — O Lord of Valli, give me the support of your hand.",
+   [("krau~nchAsurendraparikhaNDana","shatterer of Krauncha and the demon king"),("shaktishUlachApAdishastra","spear, trident, bow and other weapons"),("divyapANe","O one with divine hands"),("shikhIndravAha","rider of the king of peacocks")]),
+  ("Known in the middle of the chariot-circle of the god of gods, with the city of Indra's throne and a firm bow in hand; having slain Shura, praised by millions of gods — O Lord of Valli, give me the support of your hand.",
+   [("rathamaNDalamadhyavedya","known at the centre of the chariot"),("devendrapIThanagaraM","Indra's throne-city"),("dR^iDhachApahastam","with a firm bow in hand"),("shUraM nihatya","having slain Shura"),("surakoTibhiH IDyamAna","praised by millions of gods")]),
+  ("Lovely with necklaces of gems and jewels, a crown, armlets, earrings and a shining armour; O hero, conqueror of Taraka, saluted by the hosts of gods — O Lord of Valli, give me the support of your hand.",
+   [("hArAdiratnamaNi","necklaces with gems and jewels"),("kirITa","crown"),("keyUrakuNDala","armlets and earrings"),("kavacha","armour"),("he vIra","O hero"),("tArakajaya","conqueror of Taraka")]),
+  ("Crowned and anointed by Indra and the great sages with Ganga water sanctified by the five-syllable mantra and with the five nectars; O lord seated on the highest seat with Hari — O Lord of Valli, give me the support of your hand.",
+   [("pa~nchAkSharAdimanumantrita","sanctified with the five-syllable mantra and others"),("gA~NgatoyaiH","with Ganga water"),("pa~nchAmR^itaiH","with the five nectars"),("paTTAbhiShikta","crowned, consecrated"),("parAsanAtha","lord of the supreme seat")]),
+  ("O Kartikeya, with your gaze full of the nectar of compassion, bathe and protect me, whose mind is stained by desire and other diseases — with a radiance lovely as the moon. O Lord of Valli, give me the support of your hand.",
+   [("karuNAmR^itapUrNadR^iShTyA","with a glance full of the nectar of mercy"),("kAmAdiroga","the disease of desire and the rest"),("kaluShIkR^ita","made impure"),("siktvA","having sprinkled, bathed"),("mAm ava","protect me"),("kalAdharakAnti","the lustre of the moon")]),
+  ("Phalashruti: Those who read this holy Subrahmanya Ashtakam all attain liberation by Subrahmanya's grace. Whoever reads it on rising in the morning — the sins of ten million births are destroyed in that very moment.",
+   [("puNyaM","holy"),("muktim AyAnti","attain liberation"),("prasAdataH","by the grace"),("prAtarutthAya","rising at dawn"),("koTijanmakR^itaM pApaM","sins of ten million births"),("tatkShaNAdeva nashyati","perish that very instant")]),
+ ]
+}

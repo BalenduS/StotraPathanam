@@ -1,6 +1,6 @@
 # Stotra Pathashala
 
-A small web app for learning five stotras verse by verse, in Devanagari and Telugu, with meanings.
+A small web app for learning six stotras verse by verse, in Devanagari and Telugu, with meanings.
 
 **Live:** https://balendus.github.io/StotraPathanam/
 
@@ -11,11 +11,12 @@ A small web app for learning five stotras verse by verse, in Devanagari and Telu
 | Aditya Hrudayam | Valmiki Ramayana, Yuddha Kanda | 31 verses |
 | Karthikeya (Subrahmanya) Bhujangam | Adi Shankaracharya | 33 verses |
 | Shiva Stuti (Shambhu Stuti, recited by Shri Rama) | Brahma Purana, chapter 123 | 12 verses |
+| Subrahmanya Ashtakam (Karavalamba Stotram) | Attributed to Adi Shankaracharya | 8 verses + phalashruti |
 
 ## Features
 
 - Switch between Devanagari, Telugu, or both
-- Meaning for every verse, plus key-word meanings for Guru Ashtakam, Aditya Hrudayam, Karthikeya Bhujangam and Shiva Stuti
+- Meaning for every verse, plus key-word meanings for Guru Ashtakam, Aditya Hrudayam, Karthikeya Bhujangam, Shiva Stuti and Subrahmanya Ashtakam
 - **Test recall** mode: blurs the verse except its first line; tap a line to check yourself
 - Mark verses as *Learning* or *Memorised*, review the ones in progress, resume where you left off
 - Adjustable text size, light and dark themes

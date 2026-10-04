@@ -61,6 +61,19 @@ seen={}
 for v in sv:
     if not any(h in ' '.join(v['it']) for h in ('karatA','hU.N','haiM','meM ')) and v['n'] not in seen: seen[v['n']]=v
 res['shambhu']=[seen[k] for k in range(1,13)]
+
+# Subrahmanya Ashtakam (Karavalamba)
+b=body('subrahmaNyAShTakamkarAvalambastotra.itx')
+b=re.sub(r'##\s*var\s*##[^\n]*','',b)
+b=clean(b)
+b=b.replace('madhyave.adya','madhyavedya').replace('pIThanakaraM','pIThanagaraM')
+b=b.split('\\endtitles ##',1)[1].split('|| iti')[0]
+sa=[]
+for n,ch in verses_from(b, r'\|\|\s*(\d+)\s*\|\|'):
+    sa.append({'n':int(n),'it':[l.strip() for l in ch.split('\n') if l.strip()]})
+tail=[l.strip() for l in b.rsplit('|| 8||',1)[1].split('\n') if l.strip()]
+sa.append({'n':9,'it':tail})
+res['subashtakam']=sa
 json.dump(res,open('raw.json','w'),ensure_ascii=False,indent=1)
 for k,v in res.items():
     print(k,len(v))
