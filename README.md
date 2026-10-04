@@ -20,6 +20,7 @@ A small web app for learning five stotras verse by verse, in Devanagari and Telu
 - Mark verses as *Learning* or *Memorised*, review the ones in progress, resume where you left off
 - Adjustable text size, light and dark themes
 - Progress is saved in your browser's local storage (per device)
+- Installable: on iPhone, open the live link in Safari → Share → **Add to Home Screen**; on Android, Chrome menu → **Install app**. The icon is a tripundra (three lines of vibhuti) with a kumkum bindu, in `icons/`.
 
 ## Text
 
