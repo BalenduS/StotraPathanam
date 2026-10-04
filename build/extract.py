@@ -48,6 +48,19 @@ for blk in b.split('##'):
         ls=[l.strip() for l in blk.split('\n') if l.strip()]
         bv.append(ls)
 res['bhujangam']=[{'n':i+1,'it':v} for i,v in enumerate(bv)]
+
+# Shambhu Stuti (Rama-krita, Brahma Purana): use the plain text section after the annotated one
+b=clean(body('shambhustutiH.itx'))
+b=b.split('|| 12||',1)[1]
+b=b.replace('dadAti sarva namAmi','dadAti sarvaM namAmi')
+sv=[]
+for n,ch in verses_from(b, r'\|\|\s*(\d+)\s*\|\|'):
+    ls=[l.strip() for l in ch.split('\n') if l.strip() and not l.strip().startswith(('%','\\','#'))]
+    sv.append({'n':int(n),'it':ls[-2:]})
+seen={}
+for v in sv:
+    if not any(h in ' '.join(v['it']) for h in ('karatA','hU.N','haiM','meM ')) and v['n'] not in seen: seen[v['n']]=v
+res['shambhu']=[seen[k] for k in range(1,13)]
 json.dump(res,open('raw.json','w'),ensure_ascii=False,indent=1)
 for k,v in res.items():
     print(k,len(v))

@@ -2,6 +2,7 @@ import re, json
 from indic_transliteration import sanscript as S
 from m_guru import GURU; from m_aditya import ADITYA; from m_bhujangam import BHUJ
 from m_rudram import *
+from m_shambhu import SHAMBHU
 raw=json.load(open('raw.json')); rr=json.load(open('rudram_raw.json'))
 FIX=[('.h',''),('\\','')]
 def prep(s):
@@ -72,8 +73,13 @@ ch=[reflow(mkunit(c,'Anuvaka %d'%(i+1),CHAMAKAM[i],numlabel=num(i+1))) for i,c i
 ch.append(mkunit(rr['chtail'],'Closing',CHAMAKAM_CLOSING,numlabel='॥'))
 grps.append({'name':'Chamakam','theme':"The 'cha me' prayer: eleven anuvakas asking for every good thing in life, and that all of it be offered back in sacrifice.",'units':ch})
 out.append({'id':'rudram','name':'Sri Rudram','dev':'श्रीरुद्रम्','tel':'శ్రీరుద్రమ్','by':'Krishna Yajur Veda, Taittiriya Samhita','intro':RUDRAM_INTRO,'groups':grps})
+# Shambhu Stuti
+units=[]
+for i,(r,(m,g)) in enumerate(zip(raw['shambhu'],SHAMBHU['v'])):
+    units.append(mkunit(r['it'],'Verse %d'%(i+1),m,g,num(i+1)))
+out.append({'id':'shambhu','name':'Shiva Stuti','dev':'शम्भुस्तुतिः','tel':'శమ్భుస్తుతిః','by':'Shri Rama · Brahma Purana','intro':SHAMBHU['intro'],'note':'Also known as Shambhu Stuti or Rama-krita Shiva Stotram.','groups':[{'name':'Verses','units':units}]})
 # reorder: Rudram, Guru, Aditya, Bhujangam (user's order)
-order={'rudram':0,'guru':1,'aditya':2,'bhujangam':3}
+order={'rudram':0,'guru':1,'aditya':2,'bhujangam':3,'shambhu':4}
 out.sort(key=lambda x:order[x['id']])
 json.dump(out,open('data.json','w'),ensure_ascii=False,separators=(',',':'))
 for s in out:
