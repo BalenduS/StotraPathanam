@@ -1,6 +1,6 @@
 # Stotra Pathashala
 
-A small web app for learning seven stotras verse by verse, in Devanagari and Telugu, with meanings.
+A small web app for learning ten stotras verse by verse, in Devanagari and Telugu, with meanings.
 
 **Live:** https://balendus.github.io/StotraPathanam/
 
@@ -13,11 +13,14 @@ A small web app for learning seven stotras verse by verse, in Devanagari and Tel
 | Karthikeya (Subrahmanya) Bhujangam | Adi Shankaracharya | 33 verses |
 | Shiva Stuti (Shambhu Stuti, recited by Shri Rama) | Brahma Purana, chapter 123 | 12 verses |
 | Subrahmanya Ashtakam (Karavalamba Stotram) | Attributed to Adi Shankaracharya | 8 verses + phalashruti |
+| Hanuman Chalisa (Awadhi) | Goswami Tulsidas | 2 dohas + 40 chaupais + closing doha |
+| Durga Suktam | Taittiriya Aranyaka (Mahanarayana Upanishad) | 7 mantras + Durga Gayatri |
+| Argala Stotram | Markandeya Purana (recited before the Durga Saptashati) | 27 verses |
 
 ## Features
 
 - Switch between Devanagari, Telugu, or both
-- Meaning for every verse, plus key-word meanings for Ganesha Pancharatnam, Guru Ashtakam, Aditya Hrudayam, Karthikeya Bhujangam, Shiva Stuti and Subrahmanya Ashtakam
+- Meaning for every verse, plus key-word meanings for Ganesha Pancharatnam, Guru Ashtakam, Aditya Hrudayam, Karthikeya Bhujangam, Shiva Stuti, Subrahmanya Ashtakam, Durga Suktam and Argala Stotram (Hanuman Chalisa has verse meanings)
 - **Test recall** mode: blurs the verse except its first line; tap a line to check yourself
 - Mark verses as *Learning* or *Memorised*, review the ones in progress, resume where you left off
 - Adjustable text size, light and dark themes
@@ -26,7 +29,7 @@ A small web app for learning seven stotras verse by verse, in Devanagari and Tel
 
 ## Text
 
-Sanskrit text is taken from [sanskritdocuments.org](https://sanskritdocuments.org) (ITRANS files in `build/`), converted to Devanagari and Telugu with [indic_transliteration](https://pypi.org/project/indic-transliteration/). A few encoding typos in the Rudram file were corrected (listed in `build/rudram.py`). Rudram is shown without svara (accent) marks; learn the chanting from a teacher or a trusted recording.
+Sanskrit text is taken from [sanskritdocuments.org](https://sanskritdocuments.org) (ITRANS files in `build/`), converted to Devanagari and Telugu with [indic_transliteration](https://pypi.org/project/indic-transliteration/). A few encoding typos in the Rudram file were corrected (listed in `build/rudram.py`). Rudram and Durga Suktam are shown without svara (accent) marks; learn the chanting from a teacher or a trusted recording.
 
 English meanings are original plain-language translations written for this app.
 

@@ -5,6 +5,9 @@ from m_rudram import *
 from m_shambhu import SHAMBHU
 from m_subashtakam import SUBASHT
 from m_ganesha import GANESHA
+from m_hanuman import HANUMAN
+from m_durga import DURGA
+from m_argala import ARGALA
 raw=json.load(open('raw.json')); rr=json.load(open('rudram_raw.json'))
 FIX=[('.h',''),('\\','')]
 def prep(s):
@@ -12,20 +15,20 @@ def prep(s):
     s=re.sub(r'(\|\||\.\.)\s*\d*\s*(\|\||\.\.)\s*$','',s)   # trailing verse number
     s=re.sub(r'\|\|$','',s).strip()
     s=re.sub(r'\s\.\.$',' ||',s); s=re.sub(r'\s\.$',' |',s)
-    s=s.replace('\\!','')
+    s=s.replace('\\!','').replace('barana_U.N','baranau.N')
     for a,b in FIX: s=s.replace(a,b)
     s=s.replace('<GM>','\u0001')
     return re.sub(r'\s+',' ',s).strip()
 def dev(s):
     d=S.transliterate(prep(s),S.ITRANS,S.DEVANAGARI)
-    return d.replace('\u0001','ग्ं').replace(' -','-')
+    return d.replace('\u0001','ग्ं').replace(' -','-').replace('बरनौँ','बरनउँ').replace('बरन_उँ','बरनउँ')
 def tel(d):
     return S.transliterate(d,S.DEVANAGARI,S.TELUGU)
 def num(n,last=True):
-    d=S.transliterate(str(n),S.ITRANS,S.DEVANAGARI); return '॥ '+d+' ॥'
+    d=S.transliterate(str(n),S.ITRANS,S.DEVANAGARI); return '॥\u00a0'+d+'\u00a0॥'
 def mkunit(lines,label,meaning,gl=None,numlabel=None):
     dl=[dev(l) for l in lines if prep(l)]
-    if numlabel is not None: dl[-1]=dl[-1].rstrip(' ।|॥')+' '+numlabel
+    if numlabel is not None: dl[-1]=dl[-1].rstrip(' ।|॥')+'\u00a0'+numlabel
     u={'label':label,'dev':dl,'tel':[tel(x) for x in dl],'m':meaning}
     if gl: u['g']=[{'dev':dev(w),'tel':tel(dev(w)),'m':m} for w,m in gl]
     return u
@@ -95,8 +98,26 @@ units=[]
 for i,(r,(m,g)) in enumerate(zip(raw['ganesha'],GANESHA['v'])):
     units.append(mkunit(r['it'],'Verse %d'%(i+1) if i<5 else 'Phalashruti',m,g,num(i+1)))
 out.append({'id':'ganesha','name':'Ganesha Pancharatnam','dev':'गणेशपञ्चरत्नम्','tel':'గణేశపఞ్చరత్నమ్','by':'Adi Shankaracharya','intro':GANESHA['intro'],'note':'Ganesha Pancharatna Stotram, beginning mudākarātta modakaṃ.','groups':[{'name':'Verses','units':units}]})
+# Hanuman Chalisa
+H=raw['hanuman']
+op=[mkunit(l,'Doha %d'%(i+1),HANUMAN['dohas'][i][0],HANUMAN['dohas'][i][1],'॥') for i,l in enumerate(H['open'])]
+cps=[mkunit(l,'Chaupai %d'%(i+1),HANUMAN['chaupai'][i],None,num(i+1)) for i,l in enumerate(H['chaupai'])]
+cl=[mkunit(H['close'][0],'Closing doha',HANUMAN['closing'][0],HANUMAN['closing'][1],'॥')]
+grp=[{'name':'Opening dohas','units':op}]+[{'name':'Chaupai %d–%d'%(a+1,a+10),'units':cps[a:a+10]} for a in range(0,40,10)]+[{'name':'Closing','units':cl}]
+out.append({'id':'hanuman','name':'Hanuman Chalisa','dev':'हनुमान चालीसा','tel':'హనుమాన్ చాలీసా','by':'Goswami Tulsidas · Awadhi','intro':HANUMAN['intro'],'groups':grp})
+# Durga Suktam
+units=[]
+for i,(r,(m,g)) in enumerate(zip(raw['durga'],DURGA['v'])):
+    lines=r['it'] if i<7 else [x.strip()+(' |' if k==0 else '') for k,x in enumerate(r['it'][0].split('|')) if x.strip()]
+    units.append(mkunit(lines,'Mantra %d'%(i+1) if i<7 else 'Durga Gayatri',m,g,num(i+1) if i<7 else '॥'))
+out.append({'id':'durga','name':'Durga Suktam','dev':'दुर्गासूक्तम्','tel':'దుర్గాసూక్తమ్','by':'Taittiriya Aranyaka (Mahanarayana Upanishad)','intro':DURGA['intro'],'groups':[{'name':'Mantras','units':units}]})
+# Argala
+units=[]
+for i,(r,(m,g)) in enumerate(zip(raw['argala'],ARGALA['v'])):
+    units.append(mkunit(r['it'],'Verse %d'%(i+1),m,g,num(i+1)))
+out.append({'id':'argala','name':'Argala Stotram','dev':'अर्गलास्तोत्रम्','tel':'అర్గలాస్తోత్రమ్','by':'Markandeya Purana · Durga Saptashati','intro':ARGALA['intro'],'refrain':ARGALA['refrain'],'groups':[{'name':'Invocation · 1–2','units':units[:2]},{'name':'Prayers · 3–26','units':units[2:26]},{'name':'Phalashruti · 27','units':units[26:]}]})
 # reorder: Rudram, Guru, Aditya, Bhujangam (user's order)
-order={'ganesha':-1,'rudram':0,'guru':1,'aditya':2,'bhujangam':3,'shambhu':4,'subashtakam':5}
+order={'ganesha':-1,'rudram':0,'guru':1,'aditya':2,'bhujangam':3,'shambhu':4,'subashtakam':5,'hanuman':6,'durga':7,'argala':8}
 out.sort(key=lambda x:order[x['id']])
 json.dump(out,open('data.json','w'),ensure_ascii=False,separators=(',',':'))
 for s in out:

@@ -84,7 +84,34 @@ gv=[]
 for n,ch in verses_from(b, r'\|\|\s*(\d+)\s*\|\|'):
     gv.append({'n':int(n),'it':[l.strip() for l in ch.split('\n') if l.strip()]})
 res['ganesha']=gv
+
+# Hanuman Chalisa (Awadhi)
+b=body('hanuman40.itx').split('dohA',1)[1].split('AratI')[0]
+b=b.replace('sa.nkaTa kaTai miTai saba pIrA ..','sa.nkaTa kaTai miTai saba pIrA .').replace('hanumAna chalIsA','hanumAna chAlIsA')
+op,rest=b.split('chaupAI',1)
+ch,cl=rest.split('dohA',1)
+def pairs(t):
+    ls=[l.strip() for l in t.split('\n') if l.strip() and not l.strip().startswith('#')]
+    return [ls[i:i+2] for i in range(0,len(ls),2)]
+res['hanuman']={'open':pairs(op),'chaupai':pairs(ch),'close':pairs(cl)}
+# Durga Suktam (svara-less section)
+b=body('durgAsUkta.itx').split('svararahita durgAsUktam')[1].split('|| iti durgAsUktam')[0]
+b=clean(b.split('.. atha durgAsUktam ..',1)[1])
+dv=[]
+for n,chk in verses_from(b, r'\|\|\s*(\d+)\s*\|\|'):
+    dv.append({'n':int(n),'it':[l.strip() for l in chk.split('\n') if l.strip()]})
+tail=[l.strip() for l in b.rsplit('|| 7||',1)[1].split('\n') if l.strip()]
+dv.append({'n':8,'it':tail})
+res['durga']=dv
+# Argala
+b=body('argalaastotra.itx').split('mArkaNDeya uvAcha .',1)[1].split('.. iti shrI')[0]
+b=clean(b)
+av2=[]
+for n,chk in verses_from(b, r'\.\.\s*(\d+)\s*\.\.'):
+    av2.append({'n':int(n),'it':[l.strip() for l in chk.split('\n') if l.strip()]})
+res['argala']=av2
 json.dump(res,open('raw.json','w'),ensure_ascii=False,indent=1)
 for k,v in res.items():
     print(k,len(v))
-    for x in v[:2]+v[-2:]: print('  ',x['n'],x['it'])
+    if isinstance(v,list):
+        for x in v[:2]+v[-2:]: print('  ',x['n'],x['it'])

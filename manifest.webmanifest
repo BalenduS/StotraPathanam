@@ -1,7 +1,7 @@
 {
   "name": "Stotra Pathashala",
   "short_name": "Stotras",
-  "description": "Learn Ganesha Pancharatnam, Sri Rudram, Guru Ashtakam, Aditya Hrudayam, Karthikeya Bhujangam, Shiva Stuti and Subrahmanya Ashtakam in Devanagari and Telugu with meanings.",
+  "description": "Learn Ganesha Pancharatnam, Sri Rudram, Guru Ashtakam, Aditya Hrudayam, Karthikeya Bhujangam, Shiva Stuti, Subrahmanya Ashtakam, Hanuman Chalisa, Durga Suktam and Argala Stotram in Devanagari and Telugu with meanings.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
